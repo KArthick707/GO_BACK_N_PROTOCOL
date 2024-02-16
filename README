@@ -1,0 +1,11 @@
+Project Description
+The objective of this project is to model, simulate and analyze the Go-Back-N protocol. As explained in the lecture slides, Go-Back-N protocol is based on sliding window flow control method.
+The project can be implemented by extending the simple tic-toc model. The following features should be demonstrated.
+Station A (e.g., TIC) sending packets at specified rate towards Station B (e.g., TOC)
+The following variables should be configurable via the omnetpp.ini file,
+
+1. The data rate. That is, the rate at which TIC sends packets to TOC
+2. The window size (W) for TOC. That is, the number of packets TIC can send towards TOC without receiving ACKs from TOC. Or this indicates the maximum buffer (or queue) size in the TOC.
+3. The size of N (where N < W). That is the number of packets that the receiver receives before sending an acknowledgment.
+4. The packet loss/error rate. This should be random. HINT: use exponential function (or uniform function as described in the tutorial).
+5. Keep the size of sequence number field in the packets to 8 (or 3 bits) bits, to allow maximum number of 256 (or 8) sequence numbers before the sequence number wraps around (The sequence number should be shown to wrap around and continue for other frames).
